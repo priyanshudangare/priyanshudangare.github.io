@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Priyanshu Dangare</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="mainstyle.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+	<script src="mainscript.js"></script>
 </head>
+
 <body>
-	<div class="content">
-		<h1>Priyanshu Dangare</h1>
-		<div class="nav">
-			<ul>
-				<li><a href="https://priyanshudangare.github.io/" class="active">Homepage</a></li>
-				<li><a href="https://priyanshudangare.github.io/blogs.html">Blogs</a></li>
-				<li><a href="https://priyanshudangare.github.io/podcasts.html">Podcast</a></li>
-				<li><a href="https://priyanshudangare.github.io/projects.html">Projects</a></li>
-			</ul>
+	<button id="theme_btn" onclick="toggleTheme()">Toggle Theme</button>
+	<div id="page">
+		<div id="header">
+			<img src="images/priyanshu_256x256.jpg">
+			<h1>Priyanshu Dangare</h1>
+			<div id="nav">
+				<a href="index.html">Home</a>
+				<a href="blogs.html">Blogs</a>
+				<a href="podcast.html">Podcast</a>
+				<a href="links.html">Links</a>
+			</div>
 		</div>
-		<div style="clear: both;"></div>
-		<h2>Who me</h2>
-		<p>I'm a 11th student and a computers enthusiast. I really like music and work of deadmau5 and Daft Punk.</p>
-
-		<h2>What I am up to</h2>
-		<p>I am working on my blog and podcast which will come out after my 12th exams.</p>
-
-		<h2>About this website</h2>
-		<p>This site was hosted thanks to Github Pages but I am looking to setup a server using my old computer to host this website on my own. This site was completely written by me using Sublime Text and Firefox. The font is Oxygen by Vernon Adams. The background color is #18393e, which is the <a href="https://www.jeffreythompson.org/blog/2014/08/13/average-color-of-the-earth/">average color of the earth</a>, as seen from a satellite.</p>
-		<p>&#169; 2020 Priyanshu Dangare</p>
+		<div style="clear:both;"></div>
+		<div class="article">
+			<h1>This site is under construction</h1>
+			<p>This website might be broken.</p>
+		</div>
+		<div class="row">
+				<div class="card">
+					<a href="#"> 
+					<img src="images/microphone_256x256.jpg">
+					<h1>Title</h1>
+					</a>
+				</div>
+				<div class="card">
+					<a href="#">
+					<img src="images/microphone_256x256.jpg">
+					<h1>Title</h1>
+					</a>
+				</div>
+		</div>
+		<div class="article">
+			<h1>About this Website</h1>
+			<p>The entire website was written by me using Sublime Text and Firefox. I used many images from Unsplash by various authors. The font is Archivo Narrow. This website is hosted on Github Pages.</p>
+		</div>
+	<div id="footer">
+		<p>&copy; 2020 Priyanshu Dangare</p>
+	</div>
 	</div>
 </body>
+
 </html>
