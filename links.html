@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Archivo Narrow', sans-serif;
+	text-decoration: none;
+	font-size: 20px;
+	color: #000;
+}
+
+body {
+	max-width: 800px;
+	margin: auto;
+}
+
+#leftcol, #rightcol {float: left; width: 50%; padding: 20px; box-sizing: border-box; padding-top: 0;}
+
+#leftcol {padding-right: 0;}
+
+.card {
+	background-color: #eee;
+	padding: 10px;
+	margin-top: 20px;
+	border-width: 0;
+	border-style: solid;
+	border-left-width: 5px;
+	border-color: #3477eb;
+	box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+@media only screen and (max-width: 600px) {
+
+#leftcol, #rightcol {
+	width: 100%;
+	padding: 20px;
+	padding-top: 0;
+}
+
+#leftcol {padding-bottom: 0;}
+
+}
+
+</style>
+<head>
+	<title>Links</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="card" style="margin-left: 20px; margin-right: 20px;"><h1>Links Page</h1></div>
+	<div id="leftcol">
+		<div class="card"><a href="https://www.youtube.com/watch?v=EiWOBeMY4kE"><h1>Latest Youtube Video</h1><p>PRO DJ MIX ON EDJING MIX | Creative Mixing Using Android | Tech House & Bass House</p></a></div>
+		<div class="card"><a href="https://www.youtube.com/channel/UCHfYZyqj-qtQhKsDSMCFSUg/"><h1>Youtube Channel</h1><p>Music Podcasts Computers</p></a></div>
+	</div>
+	<div id="rightcol">
+		<div class="card"><a href="https://priyanshudangare.github.io/"><h1>Blog Website</h1></a></div>
+	</div>
+</body>
+</html>
