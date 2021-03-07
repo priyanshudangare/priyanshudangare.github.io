@@ -57,14 +57,18 @@ body {background-color: var(--bg-color)}
 	padding-right: 20px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
 	position: fixed;
-	width: 100%;
+	width: 90%;
+	max-width: 1200px;
 	top: 0;
+	left: 50%;
+    transform: translate(-50%, 0);
 	background-color: var(--bg-color);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 #headercontent {
 	margin: auto;
-	max-width: 1200px;
 }
 
 #nav button {
@@ -179,7 +183,7 @@ body {background-color: var(--bg-color)}
 	position: fixed;
 	z-index: 1;
 	top: 0;
-	left: 0;
+	left: 5%;
 	background-color: transparent;
 	border: none;
 
