@@ -1,54 +1,76 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Priyanshu Dangare</title>
-	<link rel="stylesheet" type="text/css" href="mainstyle.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
-	<script src="mainscript.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width">
 </head>
-
 <body>
-	<button id="theme_btn" onclick="toggleTheme()">Toggle Theme</button>
-	<div id="page">
-		<div id="header">
-			<img src="images/priyanshu_256x256.jpg">
-			<h1>Priyanshu Dangare</h1>
+	<button id="mobilemenu" onclick="toggleMenu()"><img id="mobilemenuimg" src="menu.svg"></button>
+	<div id="header">
+		<div id="headercontent">
 			<div id="nav">
-				<a href="index.html">Home</a>
-				<a href="blogs.html">Blogs</a>
-				<a href="podcast.html">Podcast</a>
-				<a href="links.html">Links</a>
+				<a href="#">Home</a>
+				<a href="#">Archive</a>
+				<a href="#">Podcast</a>
+				<button onclick="toggleTheme()">Theme</button>
+			</div>
+			<h1>Priyanshu Dangare</h1>
+		</div>
+	</div>
+	<div id="main">
+		<div id="content">
+			<div class="post">
+				<h2>15 March 2020</h2>
+				<h1>Blog Post Title</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="#" class="readmore">Read More</a>
+			</div>
+			
+			<div class="post">
+				<h2>15 March 2020</h2>
+				<h1>Blog Post Title</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="#" class="readmore">Read More</a>
 			</div>
 		</div>
-		<div style="clear:both;"></div>
-		<div class="article">
-			<h1>This site is under construction</h1>
-			<p>This website might be broken.</p>
+		<div id="sidebar">
+			<div class="card">
+				<img src="profile_null.jpg" class="profile">
+				<h1>About Me</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div id="archive">
+				<h1>Other Posts</h1>
+				<a href="#">Post - March 6 2020</a>
+				<a href="#">Post - March 6 2020</a>
+				<a href="#">Post - March 6 2020</a>
+				<a href="#">Post - March 6 2020</a>
+			</div>
 		</div>
-		<div class="row">
-				<div class="card">
-					<a href="#"> 
-					<img src="images/microphone_256x256.jpg">
-					<h1>Title</h1>
-					</a>
-				</div>
-				<div class="card">
-					<a href="#">
-					<img src="images/microphone_256x256.jpg">
-					<h1>Title</h1>
-					</a>
-				</div>
-		</div>
-		<div class="article">
-			<h1>About this Website</h1>
-			<p>The entire website was written by me using Sublime Text and Firefox. I used many images from Unsplash by various authors. The font is Archivo Narrow. This website is hosted on Github Pages.</p>
-		</div>
+	</div>
 	<div id="footer">
-		<p>&copy; 2020 Priyanshu Dangare</p>
+		<div id="footercontent">
+			<p>&copy; 2020 Priyanshu Dangare</p>
+		</div>
 	</div>
-	</div>
+	<script src="main.js"></script>
 </body>
-
 </html>
