@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Priyanshu Dangare</title>
+	<title>Plasma Effect</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="theme.css">
 </head>
 <body>
-	<button id="mobilemenu" onclick="toggleMenu()"><img id="mobilemenuimg" src="menulight.svg"></button>
+	<button id="mobilemenu" onclick="toggleMenu()"><img id="mobilemenuimg" src="../menulight.svg"></button>
 	<div id="header">
 		<div id="headercontent">
 			<div id="nav">
-				<a href="index.html">Home</a>
-				<a href="blog.html">Archive</a>
-				<a href="podcast.html">Podcast</a>
+				<a href="../index.html">Home</a>
+				<a href="../blog.html">Archive</a>
+				<a href="../podcast.html">Podcast</a>
 			</div>
 			<h1>Priyanshu Dangare</h1>
 		</div>
 	</div>
 	<div id="main">
 		<div id="content">
-			<div class="post">
-				<h2>8 March 2020</h2>
-				<h1>Plasma Effect</h1>
-				<p>Plasma Effect is a cool effect from old demos rendered using sine and cosine functions. We can also animate it. Here, I created a script in python to render out plasma effect on a image file.</p>
-				<a href="blog/plasma_effect.html" class="readmore">Read More</a>
-			</div>
-			
-			<div class="post">
-				<h2>31 February 2020</h2>
-				<h1>Template</h1>
+			<div class="fullpost">
+				<h1>Post Title</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<a href="blog/template.html" class="readmore">Read More</a>
 			</div>
 		</div>
 		<div id="sidebar">
 			<div class="card">
-				<img src="profile.jpg" class="profile">
+				<img src="../profile_null.jpg" class="profile">
 				<h1>About Me</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -53,8 +45,7 @@
 			</div>
 			<div id="archive">
 				<h1>Other Posts</h1>
-				<a href="blog/template.html">Template - 31 Feb 2020</a>
-				<a href="blog/plasma_effect.html">Plasma Effect - 8 Mar 2020</a>
+				<a href="template.html">Template - 31 Feb 2020</a>
 			</div>
 		</div>
 	</div>
@@ -63,6 +54,7 @@
 			<p>&copy; 2020 Priyanshu Dangare</p>
 		</div>
 	</div>
-	<script type="text/javascript" src="main.js"></script>
+	<script src="rainbow-custom.min.js"></script>
+	<script type="text/javascript" src="../main.js"></script>
 </body>
 </html>

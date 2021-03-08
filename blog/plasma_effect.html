@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plasma Effect</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+<body>
+	<button id="mobilemenu" onclick="toggleMenu()"><img id="mobilemenuimg" src="../menulight.svg"></button>
+	<div id="header">
+		<div id="headercontent">
+			<div id="nav">
+				<a href="../index.html">Home</a>
+				<a href="../blog.html">Archive</a>
+				<a href="../podcast.html">Podcast</a>
+			</div>
+			<h1>Priyanshu Dangare</h1>
+		</div>
+	</div>
+	<div id="main">
+		<div id="content">
+			<div class="fullpost">
+	<h1>Plasma Effect</h1>
+	<p>Plasma Effect is a cool effect from old demos rendered using sine and cosine functions. We can also animate it. Here, I created a script in python to render out plasma effect on a image file.</p>
+	<img src="images/plasma_normal.png">
+	<p>Here is how the plasma effect looks like.</p>
+	<p>To create the effect I setup Pillow (A Python library to work with images.) and do 2 for loops to render every pixel in the image.</p>
+	<pre>
+	<code data-language="python">
+from PIL import Image
+from math import sin
+from math import cos
+from math import sqrt
+
+#Define the size of the image.
+size = 256, 256
+
+myImage = Image.new('RGB',size,color=(255,0,0))
+
+#pi constant required for sin functions
+pi = 3.14159
+
+#iterate through every pixel in image and perform the function.
+for x in range(size[0]): 
+	for y in range(size[1]):
+		r = 0
+		g = 0
+		b = 0
+		r = 127.5+r*127.5
+		g = 127.5+g*127.5
+		b = 127.5+b*127.5
+		myImage.putpixel((x,y), (int(r),int(g),int(b)))
+
+#save the image
+myImage.save("plasma.png")
+
+#open the image in Image Viewer
+myImage.show()
+	</code>
+	</pre>
+	<p>As the r, g, b values will range from -1 to 1 we multiply it by 127.5 and add 127.5 to bring those values in the range from 0 to 255 which is 32 bit color. Now we need to calculate a value "v".</p>
+
+	<pre>
+		<code data-language="python">
+#calculation of v
+
+#choose a scaling value for the functions
+scale = 1/20 
+#start with v = 0
+v = 0 
+# here is our first function which creates vertical bars
+v += sin(x*scale)
+
+#r,g,b values all set to v for a greyscale image
+r = v
+g = v
+b = v
+		</code>
+	</pre>
+	<img src="images/plasma_sinx.png">
+	<p>Here is how the first function looks.</p>
+	<pre>
+		<code data-language="python">
+#calculation of v
+
+#choose a scaling value for the functions
+scale = 1/20 
+#start with v = 0
+v = 0 
+# here is our second function which creates bars at 45 degree angle
+v += sin(x+y*0.5*scale)
+
+#r,g,b values all set to v for a greyscale image
+r = v
+g = v
+b = v
+		</code>
+	</pre>
+	<img src="images/plasma_sinxy.png">
+	<p>Here is how the second function looks.</p>
+	<pre>
+		<code data-language="python">
+#calculation of v
+
+#choose a scaling value for the functions
+scale = 1/20 
+#start with v = 0
+v = 0 
+# here is our third function which creates bars curved around the corner
+v += sin(sqrt(scale*scale*(sx*sx+sy*sy)+1))
+
+#r,g,b values all set to v for a greyscale image
+r = v
+g = v
+b = v
+		</code>
+	</pre>
+	<img src="images/plasma_sinsqrt.png">
+	<p>Here is how the third function looks.</p>
+	<p>We can combine all of the functions by adding them up. We need to divide v by 3 to make them in range of -1 to 1.</p>
+	<img src="images/plasma_combined.png">
+	<p>This is the image when we combine all three functions together</p>
+	<p>We can take the sin of v multiplied by some constant values to get it look nice.</p>
+	<pre>
+		<code data-language="python">
+from PIL import Image
+from math import sin
+from math import cos
+from math import sqrt
+
+size = 256, 256
+
+myImage = Image.new('RGB',size,color=(255,0,0))
+
+pi = 3.14159
+
+for x in range(size[0]): 
+	for y in range(size[1]):
+		scale = 1/20
+		sx = x
+		sy = y
+		v = 0
+		v += sin(sx*scale)
+		v += sin((sx+sy)*0.5*scale)
+		v += sin(sqrt(scale*scale*(sx*sx+sy*sy)+1))
+		# Taking sin of v multiplied by constants , change these to change the colors.
+		r = sin(v*pi)
+		g = sin(v*pi+2*pi/3)
+		b = sin(v*pi+4*pi/3)
+		r = 127.5+r*127.5
+		g = 127.5+g*127.5
+		b = 127.5+b*127.5
+		myImage.putpixel((x,y), (int(r),int(g),int(b)))
+
+myImage.save("plasma.png")
+
+myImage.show()
+
+		</code>
+	</pre>
+	<p>This is the final script.</p>
+	<p>To animate the effect you can add the time to the sin functions.</p>
+	</div>
+		</div>
+		<div id="sidebar">
+			<div class="card">
+				<img src="../profile.jpg" class="profile">
+				<h1>About Me</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div id="archive">
+				<h1>Other Posts</h1>
+				<a href="template.html">Template - 31 Feb 2020</a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="footercontent">
+			<p>&copy; 2020 Priyanshu Dangare</p>
+		</div>
+	</div>
+	<script src="rainbow-custom.min.js"></script>
+	<script type="text/javascript" src="../main.js"></script>
+</body>
+</html>
